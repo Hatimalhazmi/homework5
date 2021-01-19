@@ -2,44 +2,77 @@
 #!/usr/bin/python
 
 """
-Python Core object Types
+Python Functions and Recursions
+
+"""
+"""
+QUESTION 1: 
+========================================================================================================
+Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+For example, given n = 3, a solution set is:
+[
+  "((()))",
+  "(()())",
+  "(())()",
+  "()(())",
+  "()()()"
+]
+Write a function named generateParenthesis that takes an integer as an input and returns a list of strings 
+as an output. Note that you can define a function inside a function if necessary.
+def generateParenthesis(N):
+    results = []
 """
 
-import numpy as np
+    def generateParenthesis(N):
+    results = []
 
+    def backtrack(parenthesis, opening, closing):
+        if len(parenthesis) == 2 * N:
+            results.append(parenthesis)
+            return
 
-#### arr: 		the input array
-#### nRow: 		the # of row in the reformed array
-#### nCol: 		the # of column in the reformed array
-#### new_arr:	the new reformed array as the output
-#### reform the array to a new array with size(nRow,nCol)
-def reform_array_dimension_col_wise(arr, nRow, nCol):
-	new_arr =  					# write your code here
-	return new_arr
+        if opening < N:
+            backtrack(parenthesis + '(', opening + 1, closing) # generate opening bracket
 
+        if closing < opening:
+            backtrack(parenthesis + ')', opening, closing + 1) # generate closing bracket
 
-#### arr: 		the input array
-#### new_arr:	the new generated array as the output
-#### stack the column summation below the bottom of the array
-def append_sum_of_array(arr):
-	new_arr =  					# write your code here
-	return new_arr 
+    backtrack('', 0, 0)
+    return results
+"""
 
+QUESTION 2: 
+========================================================================================================
+Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+Note: For the purpose of this problem, we define empty string as valid palindrome.
+Example 1:
+========================================
+Input: "A man, a plan, a canal: Panama"
+Output: true
+Example 2:
+=========================================
+Input: "race a car"
+Output: false
+Write a function named isPalindrome that takes a string as an input and returns a bool as an output.
+"""
+class Solution {
+    public static boolean isPalindrome(String s) {
+        if (s == null) return false;
+        if (s.length() == 0) return true;
+        s = s.toLowerCase().trim();
+        int i = 0;
+        int j = s.length() - 1;
+        while (i < j) {
+            while (i < j && !Character.isLetterOrDigit(s.charAt(i))) i++ ;
+            while (i < j && !Character.isLetterOrDigit(s.charAt(j))) j--;
+            if (s.charAt(i++) != s.charAt(j--)) return false;
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        isPalindrome("A man, a plan, a canal: Panama");
+    }
 
-#### arr: 		the input array
-#### new_arr:	the new generated array as the output
-#### delete the top row and ending column from the array
-def remove_topRow_endCol_from_array(arr):
-	new_arr = 				# write your code here
-	return new_arr
-
-#### arr: 		the input array
-#### new_arr:	the new generated array as the output
-#### calculate the product of each row and append to the array, use row_product to save the product value and add to the new array
-def add_row_product_to_array(arr):
-	row_product = 				# write your code here
-	new_arr =  				# write your code here
-	return new_arr
 
 
 
