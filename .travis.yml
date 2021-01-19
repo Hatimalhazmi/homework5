@@ -5,6 +5,4 @@ python:
           - "3.6"
 
 script: 
-          - pip install -U pip
-          - python setup.py install
-          - pytest
+          - python my_answers.py
