@@ -22,8 +22,9 @@ as an output. Note that you can define a function inside a function if necessary
 def generateParenthesis(N):
     results = []
 """
+import itertools
 
-    def generateParenthesis(N):
+def generateParenthesis(N):
     results = []
 
     def backtrack(parenthesis, opening, closing):
