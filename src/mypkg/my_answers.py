@@ -55,7 +55,7 @@ Example 2:
 Input: "race a car"
 Output: false
 Write a function named isPalindrome that takes a string as an input and returns a bool as an output.
-"""
+
 class Solution {
     public static boolean isPalindrome(String s) {
         if (s == null) return false;
