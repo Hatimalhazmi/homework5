@@ -42,7 +42,7 @@ def generateParenthesis(N):
     return results
 """
 
-
+"""
 QUESTION 2: 
 ========================================================================================================
 Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
@@ -57,6 +57,7 @@ Input: "race a car"
 Output: false
 Write a function named isPalindrome that takes a string as an input and returns a bool as an output.
 
+"""
 class Solution {
     public static boolean isPalindrome(String s) {
         if (s == null) return false;
