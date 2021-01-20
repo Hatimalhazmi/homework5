@@ -8,9 +8,5 @@ def generateParenthesis(N):
     n = 3; 
     str = [""] * 2 * n; 
     printParenthesis(str, n)
-    assert( results == {}{}{}
-                       {}{{}}
-                       {{}}{}
-                       {{}{}}
-                       {{{}}})
+    assert( results == printParenthesis)
 
