@@ -1,4 +1,3 @@
-import pytest
 
 from mypkg.my_answers import generateParenthesis
 
