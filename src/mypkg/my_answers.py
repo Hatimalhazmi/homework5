@@ -40,7 +40,7 @@ def generateParenthesis(N):
 
     backtrack('', 0, 0)
     return results
-"""
+
 
 """
 QUESTION 2: 
