@@ -8,58 +8,60 @@ Object Oriented Programming and Python Classes
 """
 QUESTION 1: 
 ========================================================================================================
-Write a class with name WindowAverage which is initialized by a window size and returns an average of
-a stream of integers over a window by calling a method next. 
-Example:
-===========================
-    w = WindowAverage(2)
-    w.next(2) = 2
-    w.next(4) = (2+4)/2
-    w.next(3) = (4+3)/2
-    w.next(2) = (2+3)/2
-    
-Hints: You should have __init__ and next methods and can use a data structure - double-ended queue
-from collections module.    
+Write a class with name  iterator which creates iterator type that iterates from 0 to 10.
+sample output = 0 1 2 3 4 5 6 7 8 9 10 
 """
-
+# An iterable user defined type
+class iterator:
+ 
+    # Constructor
+    def __init__(self, limit):
+        self.limit = limit
+ 
+    # Creates iterator object
+    # Called when iteration is initialized
+    def __iter__(self):
+        self.x = 0
+        return self
+ 
+    # To move to next element. In Python 3,
+    # we should replace next with __next__
+    def __next__(self):
+ 
+        # Store current value ofx
+        x = self.x
+ 
+        # Stop iteration if limit is reached
+        if x > self.limit:
+            raise StopIteration
+ 
+        # Else increment and return old value
+        self.x = x + 1;
+        return x
+ 
+# Prints numbers from 0 to 10
+for i in iterator(10):
+    print(i,end =" ")
+    
 """
 QUESTION 2: 
 ========================================================================================================
-Write a class with name AlternateIterator which is initialized by two lists v1 and v2
-and returns the elements alternatively every time a method next is called and stops
-iteration when both lists are exhausted
+Write a class with name unique_subsets to get all possible unique subsets from a set of distinct integers.
 Example:
-===========================
-    Input: l1 = [1, 2, 3]
-           l2 = [4, 5, 6, 7]
-        
-    Output: [1, 4, 2, 5, 3, 6, 7]
- 
-    Usage:
-    iter = AlternateIterator(l1, l2)
-    res = []
-    while iter.has_next():
-        res.append(iter.next())
-Hints: You should have three methods: __init__, next, and has_next. 
-"""
+Input : [1, 2, 3]
+output: [[], [3], [2], [2, 3], [1], [1, 3], [1, 2], [1, 2, 3]]
 
-"""
-QUESTION 3:
-========================================================================================================
-Write a class ModifiedIterator that inherits the class AlternateIterator you wrote in Q2 that overwrites
-the method next so that it return twice of the value from l2.
-Example:
 ===========================
-    Input: l1 = [1, 2, 3]
-           l2 = [4, 5, 6, 7]
-        
-    Output: [1, 8, 2, 10, 3, 12, 14]
-    
-    Usage:
-    iter = ModifiedIterator(l1, l2)
-    res = []
-    while iter.has_next():
-        res.append(iter.next())
 """
+class unique_subsets:
+    def sub_sets(self, sset):
+        return self.subsetsRecur([], sorted(sset))
+    
+    def subsetsRecur(self, current, sset):
+        if sset:
+            return self.subsetsRecur(current, sset[1:]) + self.subsetsRecur(current + [sset[0]], sset[1:])
+        return [current]
+
+print(unique_subsets().sub_sets([1,2,3]))
 
 
