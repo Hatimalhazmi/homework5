@@ -8,7 +8,7 @@ def test_iterator(self):
 	#assert  iterator(1) == 1
 
 		ans = Solution()
-        	self.assertEqual(ans.iterator(1) == 1 )
+        	self.assertEqual(ans.i == 1 )
 	
 if __name__ == "__main__":
 
