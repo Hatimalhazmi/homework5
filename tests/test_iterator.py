@@ -4,7 +4,8 @@ from mypkg.my_answers import iterator
 
 def test_iterator():
  	for i in iterator(5):
-    		assert i == 1
+    		#assert i == 1
+		self.assertTrue(1 <= i <= 5)
 			 
 		#ans = Solution()
         	#self.assertEqual(ans.i == 1 )
