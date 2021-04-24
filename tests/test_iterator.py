@@ -3,8 +3,8 @@ from mypkg.my_answers import iterator
 
 
 def test_iterator():
- 	for i in iterator(1):
-		assert i == 1
+ 	for i in iterator(0):
+		assert i == 0
 	    		 
 			 
 		#ans = Solution()
