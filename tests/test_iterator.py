@@ -6,7 +6,7 @@ from mypkg.my_answers import iterator
 def test_iterator():
  	#for i in iterator(1):
 	for i in iterator(1):
-    	print(i,end =" ")
+    	assert (i = 1)
 
 		#ans = Solution()
         	#self.assertEqual(ans.i == 1 )
