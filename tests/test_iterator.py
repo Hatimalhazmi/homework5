@@ -5,9 +5,9 @@ def test_always_passes():
 
 
 #class Test(unittest.TestCase):
-#def test_iterator():
- 	#for i in iterator(1):
-    	#(assert iterator(1) == 1)
+def test_iterator():
+ 	for i in iterator():
+    		assert i == 1
 
 		#ans = Solution()
         	#self.assertEqual(ans.i == 1 )
