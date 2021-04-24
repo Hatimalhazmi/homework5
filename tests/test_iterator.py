@@ -7,7 +7,7 @@ def test_always_passes():
 #class Test(unittest.TestCase):
 def test_iterator():
  	for i in iterator(5):
-    		assert i == (1, 2, 3, 4, 5)
+    		assert i == 1:5
 
 		#ans = Solution()
         	#self.assertEqual(ans.i == 1 )
