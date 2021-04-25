@@ -8,8 +8,12 @@ Object Oriented Programming and Python Classes
 """
 QUESTION 1: 
 ========================================================================================================
-Write a class with name  iterator which creates iterator type that iterates from 0 to 10.
-sample output = 0 1 2 3 4 5 6 7 8 9 10 
+Write a class with name iterator which creates iterator type that iterates from 5 to a given limit. 
+For example, if the limit is 10, then it prints 0 1 2 3 4 5 6 7 8 9 10. And if the limit is 4, then it prints nothing.
+
+sample output = [5, 6, 7, 8, 9, 10] 
+
+Hint: You could have three methods: __init__, __iter__, and _next_.
 """
 # An iterable user defined type
 class iterator:
@@ -21,7 +25,7 @@ class iterator:
     # Creates iterator object
     # Called when iteration is initialized
     def __iter__(self):
-        self.x = 1
+        self.x = 5
         return self
  
     # To move to next element. In Python 3,
