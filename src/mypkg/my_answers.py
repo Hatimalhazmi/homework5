@@ -11,7 +11,7 @@ QUESTION 1:
 Write a class with name iterator which creates iterator type that iterates from 1 to a given limit. 
 For example, if the limit is 10, then it prints  1 2 3 4 5 6 7 8 9 10. 
 
-sample output = [0, 1, 2 ,3 ,4 ,5 , 6, 7, 8, 9, 10] 
+sample output = [1, 2 ,3 ,4 ,5 , 6, 7, 8, 9, 10] 
 
 Hint: You could have three methods: __init__, __iter__, and _next_.
 """
