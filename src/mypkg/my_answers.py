@@ -62,6 +62,6 @@ class unique_subsets:
             return self.subsetsRecur(current, sset[1:]) + self.subsetsRecur(current + [sset[0]], sset[1:])
         return [current]
 
-print(unique_subsets().sub_sets([1,2,3]))
+#print(unique_subsets().sub_sets([1,2,3]))
 
 
