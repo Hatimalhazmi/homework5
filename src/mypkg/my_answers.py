@@ -25,7 +25,7 @@ class iterator:
     # Creates iterator object
     # Called when iteration is initialized
     def __iter__(self):
-        self.x = 0
+        self.x = 1
         return self
  
     # To move to next element. In Python 3,
